@@ -1,10 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from datetime import datetime
 import requests
 import json
 from os import environ
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def index():
@@ -39,6 +41,16 @@ def report():
 		r = requests.post('https://api.mailgun.net/v3/vizionary-dev.xyz/messages', auth=('api', api['api']), data=emailData)
 		# print(r.status_code)
 		return jsonify({"status": "OK"})
+
+@app.after_request
+def after_request_stuff(resp):
+
+	# Support CORS
+    resp.headers['Access-Control-Allow-Origin'] = "*"
+    resp.headers['Access-Control-Allow-Methods'] = "POST, GET, OPTIONS, PUT, DELETE, PATCH"
+    resp.headers['Access-Control-Allow-Headers'] = "origin, content-type, accept, x-requested-with"
+
+    return resp
 
 
 if __name__ == "__main__":
