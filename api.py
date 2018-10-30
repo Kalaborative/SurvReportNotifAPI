@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from datetime import datetime
 import requests
@@ -11,6 +11,10 @@ CORS(app)
 @app.route("/")
 def index():
 	return "Hello."
+
+@app.route('/mp3/<path:path>')
+def send_mp3(path):
+	return send_from_directory('mp3', path)
 
 simpleData = {
 	"status": "OK",
