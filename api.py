@@ -21,11 +21,12 @@ simpleData = {
 	"requested_at": datetime.now()
 }
 
-api = {'api': 'key-8e60a5b2a29f6d59869db87cb87caee1'}
+api = {'api': '53d19baf0d9db6abc41bc92f2c50c38c-f7910792-ae9ff402'}
+base_domain = 'sandbox5b325091bd334c5792decfea9d1f14c2.mailgun.org'
 
 emailData = {
-	"from": "Zenmark Mail <postmaster@vizionary-dev.xyz>",
-	"to": "kalaborative94@gmail.com",
+	"from": "Zenmark Mail <sandbox5b325091bd334c5792decfea9d1f14c2@mailgun.org>",
+	"to": "tcsion@mail.com",
 	"subject": "New Survivio+ JS Error Report!",
 }
 
@@ -42,7 +43,7 @@ def report():
 		errorData = errorData.to_dict()
 		# print(errorData)
 		emailData["text"] = "New message! \n " + json.dumps(errorData, indent=4)
-		r = requests.post('https://api.mailgun.net/v3/vizionary-dev.xyz/messages', auth=('api', api['api']), data=emailData)
+		r = requests.post('https://api.mailgun.net/v3/{}/messages'.format(base_domain), auth=('api', api['api']), data=emailData)
 		# print(r.status_code)
 		return jsonify({"status": "OK"})
 
