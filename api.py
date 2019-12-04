@@ -25,7 +25,7 @@ api = {'api': 'key-8e60a5b2a29f6d59869db87cb87caee1'}
 
 emailData = {
 	"from": "Zenmark Mail <postmaster@vizionary-dev.xyz>",
-	"to": "kalaborative94@gmail.com",
+	"to": "tcsion@mail.com",
 	"subject": "New Survivio+ JS Error Report!",
 }
 
