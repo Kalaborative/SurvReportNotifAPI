@@ -25,11 +25,7 @@ api = {'api': '53d19baf0d9db6abc41bc92f2c50c38c-f7910792-ae9ff402'}
 base_domain = 'sandbox5b325091bd334c5792decfea9d1f14c2.mailgun.org'
 
 emailData = {
-<<<<<<< HEAD
 	"from": "Zenmark Mail <sandbox5b325091bd334c5792decfea9d1f14c2@mailgun.org>",
-=======
-	"from": "Zenmark Mail <postmaster@vizionary-dev.xyz>",
->>>>>>> 5dc6f95188d272664889984d7d9c81076c1617fe
 	"to": "tcsion@mail.com",
 	"subject": "New Survivio+ JS Error Report!",
 }
