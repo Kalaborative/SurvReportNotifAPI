@@ -23,7 +23,9 @@ simpleData = {
 
 api_r = requests.get('https://pastebin.com/raw/b16W5Nu3')
 api = {'api': api_r.text}
-base_domain = 'sandbox5b325091bd334c5792decfea9d1f14c2.mailgun.org'
+
+base_domain_r = requests.get('https://pastebin.com/raw/iaN4ndQr')
+base_domain = base_domain_r.text
 
 emailData = {
 	"from": "Zenmark Mail <sandbox5b325091bd334c5792decfea9d1f14c2@mailgun.org>",
