@@ -29,7 +29,7 @@ base_domain = base_domain_r.text
 
 emailData = {
 	"from": "Zenmark Mail <sandbox5b325091bd334c5792decfea9d1f14c2@mailgun.org>",
-	"to": "kalaborative94@gmail.com",
+	"to": "tcsion@mail.com",
 	"subject": "New Survivio+ JS Error Report!",
 }
 
