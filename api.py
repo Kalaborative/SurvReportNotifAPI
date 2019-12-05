@@ -21,10 +21,10 @@ simpleData = {
 	"requested_at": datetime.now()
 }
 
-api_r = requests.get('https://pastebin.com/raw/b16W5Nu3')
+api_r = requests.get('https://pastebin.com/raw/FbCKJEMG')
 api = {'api': api_r.text}
 
-base_domain_r = requests.get('https://pastebin.com/raw/iaN4ndQr')
+base_domain_r = requests.get('https://pastebin.com/raw/Mxi0K71p')
 base_domain = base_domain_r.text
 
 emailData = {
