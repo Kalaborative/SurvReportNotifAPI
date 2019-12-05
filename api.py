@@ -21,7 +21,8 @@ simpleData = {
 	"requested_at": datetime.now()
 }
 
-api = {'api': '53d19baf0d9db6abc41bc92f2c50c38c-f7910792-ae9ff402'}
+api_r = requests.get('https://pastebin.com/raw/b16W5Nu3')
+api = {'api': api_r.text}
 base_domain = 'sandbox5b325091bd334c5792decfea9d1f14c2.mailgun.org'
 
 emailData = {
